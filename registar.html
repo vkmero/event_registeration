@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registeration Form Event</title>
+</head>
+<body>
+    <form id="Register">
+        <label>Name :</label><br>
+        <input type="text" id="name" placeholder="Enter your name "required><br><br>
+
+        <label>Email:</label>
+        <input type="email" id="email" placeholder="Enter the email"required><br><br>
+
+        <label>Phone no:</label>
+        <input type="text" id="phoneno"placeholder="Enter the phone no"required><br><br>
+
+        <label>role:</label>
+        <input type="text" id="role" placeholder="Enter the role:"required><br><br>
+
+        <button type="submit">register Now !</button>
+    </form>
+
+    <p id="message"></p>
+
+    <script>
+        document.getElementById("Register").addEventListener("submit",function(event){
+            event.preventDefault();
+
+            document.getElementById("message").innerText="succesfull";
+            this.reset();
+        });
+    </script>
+</body>
+</html>
