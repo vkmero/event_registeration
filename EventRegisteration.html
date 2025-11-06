@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            padding: 30px;
+            background-color: darkgray;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        form{
+            padding: 20px;
+            background-color: black;
+            color: white;
+            margin: auto;
+            border-radius: 20px;
+        }
+        button,input,select{
+            background-color: white;
+            color: aqua;
+            padding: 20px;
+            border-radius: 4px;
+            width:100%;
+        }
+        button{
+            background-color: chartreuse;
+            color: antiquewhite;
+            cursor: pointer;
+        }
+        button:hover{
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <h2>RegisterrationForm</h2>
+    <form id="RegisterrationForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" placeholder="Enter your name : ">
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" placeholder="Enter your email : ">
+
+        <label for="phoneno">Phone no:</label>
+        <input type="tel" id="phoneno" placeholder="Enter your phone no : ">
+
+        <label for="select">select Event</label>
+        <select id="event">
+            <option value="workshop">Workshop</option>
+            <option value="seminar">Seminar</option>
+            <option value="competition">competition</option>
+        </select>
+        <button type="submit">Register NOw</button>
+    </form>
+
+    <script>
+        document.getElementById("registerForm").addEventListener("submit",function(event){
+            event.preventDefault();
+            alert("Thank you for registering"+ document.getElementById("name").value);
+        });
+    </script>
+</body>
+</html>
