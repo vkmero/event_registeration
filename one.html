@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>
+        Event Registeration
+    </h2>
+    <form onsubmit="return validateForm()">
+
+        <label>Name :</label>
+        <input type="text" id="name" placeholder="name">
+        <br>
+        <br>
+         <label>email :</label>
+        <input type="email" id="email" placeholder="email">
+        <br>
+        <br>
+
+         <label>password :</label>
+        <input type="password" id="pass" placeholder="password">
+        <br>
+        <br>
+
+        <button type="submit">Register !</button>
+    </form>
+</body>
+
+    <script>
+        function validateForm(){
+
+            let name = document.getElementById("name").value;
+            let email = document.getElementById("email").value;
+            let pass = document.getElementById("pass").value;
+
+            if(name == ""||email == ""||pass == ""){
+
+                alert("fill all fields");
+                return false;
+            }
+            alert("login sucesssfull !!");
+            return true;
+        }
+    </script>
+</html>
